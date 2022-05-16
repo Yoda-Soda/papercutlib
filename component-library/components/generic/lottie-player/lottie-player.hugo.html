@@ -1,0 +1,15 @@
+{{ $c := "c-lottie-player" }}
+
+{{ if .lottie_file }}
+    <lottie-player 
+        class="{{ $c }}"
+        {{ if .autoplay }}
+            autoplay
+        {{ end }}
+        {{ if .loop }}
+            loop
+        {{ end }}
+        mode="normal"
+        src="{{ .lottie_file }}">
+    </lottie-player>
+{{ end }}

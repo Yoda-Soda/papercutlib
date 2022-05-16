@@ -1,0 +1,20 @@
+{{ $c := "c-sections-hero-banner-level3" }}
+<div class="papercut">
+    <section class="hero-banner hero-banner--small {{$c}}">
+        <div class="container">
+          <div class="grid grid--left">
+            <div class="col--12 col--10--tablet col--6--laptop padding--top--xxxxl padding--bottom--xxxl--desktop">
+              {{/*  TODO: rescrict words/characters  */}}
+              <h1 class="type--page-title">{{ .title }}</h1>
+              <h2 class="{{$c}}__heading"><p>{{ .heading | safeHTML }}</p></h2>
+              <p class="type--paragraph-large">{{ .paragraph }}</p>
+            </div>
+          </div>
+          <div class="grid grid--right hero--grid margin--top--l margin--top--none--laptop">
+            <div class="col--12 col--10--mobile col--8--tablet col--6--laptop">
+              <img class="hero--image-fg" src="{{ .image.path }}" alt="{{ .image.alt }}" />
+            </div>
+          </div>
+        </div>
+      </section>
+</div>

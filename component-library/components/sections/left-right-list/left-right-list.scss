@@ -1,0 +1,137 @@
+//  --twelve-column: 1fr repeat(12, calc(min(100px, 7.3%))) 1fr; //max site width 100px = 1200px / 12 and gutter on 7.3% = 12 / 88%
+
+
+.c-sections-left-right-list {
+    background: #F8F9FA;
+    // grid-template-columns: var(--twelve-column);
+    grid-template-columns: 1fr repeat(12, calc(min(100px, 7.3%))) 1fr;
+    display: grid;
+    padding: 100px 0px;
+    &__image-container{
+        img{
+            width: 100%;
+        }
+        &--right{
+            grid-column: 2 / 7;
+            @media only screen and (min-width: 479px){
+                grid-column: 2 / 7;
+            }
+            @media only screen and (max-width: 479px){
+                grid-column: 1 / 15;
+            }
+            @media only screen and (max-width: 859px){
+                grid-column: 2 / 14;
+            }      
+            @media only screen and (min-width: 1279px){
+                grid-column: 2 / 7;
+            }      
+        }
+        &--left{
+            grid-column: 9 / 14;
+            @media only screen and (min-width: 479px){
+                grid-column: 9 / 14;
+            }
+            @media only screen and (max-width: 479px){
+                grid-column: 1 / 15;
+            }
+            @media only screen and (max-width: 859px){
+                grid-column: 2 / 14;
+            }      
+            @media only screen and (min-width: 1279px){
+                grid-column: 9 / 14;    
+            }      
+
+        }
+
+
+    }
+    &__body-container{
+        &--right{
+            grid-column: 7 / 14;
+            grid-row: 1/2;
+            @media only screen and (min-width: 479px){
+                grid-column: 7 / 14;
+            }
+            @media only screen and (max-width: 478px){
+                grid-column: 2 / 14;
+            }
+            @media only screen and (max-width: 859px){
+                grid-column: 2 / 14;
+            }
+            @media only screen and (min-width: 1279px){
+                grid-column: 7 / 14;
+            }
+        }
+
+        &--left{
+            grid-column: 2 / 9;
+            grid-row: 1/2;
+            @media only screen and (min-width: 479px){
+                grid-column: 2 / 9;
+            }
+            @media only screen and (max-width: 478px){
+                grid-column: 2 / 14;
+            }
+            @media only screen and (max-width: 859px){
+                grid-column: 2 / 14;
+            }
+            @media only screen and (min-width: 1279px){
+                grid-column: 2 / 9;
+            }
+        }
+    
+
+
+        h2{
+            font-weight: 600;
+            font-size: 32px;
+            color: #3B3B3D;
+            font-family: Barlow,Verdana,sans-serif;
+            line-height: 40px;
+
+            //TODO: Remove when we remove papercut styling
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+        
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #343A40;
+            font-family: Barlow,Verdana,sans-serif;
+            //TODO: Remove when we remove papercut styling
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+        }
+
+        ul{
+            padding-inline-start: 20px;
+            li{
+                list-style-image: url('/uploads/tick.svg');
+                margin-bottom: 8px;
+                //TODO: change font family
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                color: #343A40;
+                font-family: Barlow,Verdana,sans-serif;
+                line-height: 20px;
+                margin-left: 8px;
+
+                a{
+                    //TODO: change font family
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-decoration-line: underline;
+                    text-decoration-color: #2B5E8F;
+                    font-family: Barlow,Verdana,sans-serif;
+                    color: #2B5E8F;
+                }
+            }
+        }
+
+    }
+}

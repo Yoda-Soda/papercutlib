@@ -1,0 +1,18 @@
+{{ $c := "c-simple-background-wistia-video"}}
+<div class="{{ $c }} wistia_embed wistia_async_{{ .video_id}} playerColor=ff0000" 
+    x-init='window._wq = window._wq || [];
+    _wq.push({
+      id: "{{ .video_id }}",
+      options: {
+        playerColor: "ff0000",
+        controlsVisibleOnLoad: false,
+        volumeControl: false,
+        autoPlay: true,
+        muted: true,
+        endVideoBehavior: "loop",
+        fitStrategy: "cover",
+      }
+    });'
+    style="width: 100% !important; height: 100% !important;">
+</div>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>

@@ -1,0 +1,59 @@
+.c-sections-the-benefits {
+    &__heading{
+        width: calc(66.65667% - 7.9736px);
+        margin: 0 auto;
+        margin-bottom: 64px;
+        h4{
+            //TODO: Change font family
+            font-family: Barlow,Verdana,sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            //TODO: Add color as variable
+            color: #27AA27;
+        }
+        h2{
+            //TODO: Change font family
+            font-family: Barlow,Verdana,sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+            //TODO: Add color as variable
+            color: #3B3B3D;
+        }
+        p{
+            //TODO: Change font family
+            font-family: Barlow,Verdana,sans-serif;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            //TODO: Add color as variable
+            color: #3B3B3D;
+        }
+    }
+    &__left-right{
+        grid-template-columns: 1fr repeat(12, calc(min(100px, 7.3%))) 1fr;
+        display: grid;
+        
+        &__image{
+            grid-column: 2 / 8;    
+            padding-right: 15px;
+            img{
+                width: 100%;
+            }    
+
+        }
+        &__accordians{
+            grid-column: 8 / 14;     
+            padding-left: 15px;
+              
+        }
+    }
+
+
+}

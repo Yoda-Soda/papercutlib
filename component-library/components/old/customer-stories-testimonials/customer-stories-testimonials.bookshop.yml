@@ -1,0 +1,48 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Sections Customer-stories-testimonials"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading:
+  quote:
+  quote_author:
+  image_1:
+  image_2:
+  image_3:
+  image_1_link:
+  image_2_link:
+  image_3_link:
+  image_1_alt_tag: 
+  image_2_alt_tag: 
+  image_3_alt_tag: 
+  button_link_url:
+  button_link_text: 
+
+
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: "The proof in the pudding"
+  quote: "The benefit of PaperCut is really in its ease of use. It's the right choice if you are looking for something with ease of application and an easy user interface."
+  quote_author: "C.Y. Tung, co-founder of the Institute for Shipboard Education"
+  image_1: "https://cdn.papercut.com/web/img/products/mf/customer-stories/bullock-west-midland.jpg"
+  image_2: "https://cdn.papercut.com/web/img/products/mf/customer-stories/semester-at-sea.jpg"
+  image_3: "https://cdn.papercut.com/web/img/products/mf/customer-stories/university-john-brown.jpg"
+  image_1_link: "/customer-stories/story/bullock-west-midland/"
+  image_2_link: "/customer-stories/story/semester-at-sea/"
+  image_3_link: "/customer-stories/story/university-john-brown/"
+  image_1_alt_tag: "Bullock West Midland customer story"
+  image_2_alt_tag: "Semester at sea customer story"
+  image_3_alt_tag: "John Brown University customer story"
+  button_link_url: "/customer-stories/"
+  button_link_text: "READ OUR CUSTOMER STORIES"
+
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

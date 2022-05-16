@@ -1,0 +1,56 @@
+.c-simple-accordian {
+    details{
+        border-top: 1px solid #D9D9DC;
+        border-bottom: 1px solid #D9D9DC;
+        transition: all 0.2s;
+        &[open]{
+            padding-bottom: 15px;
+            background-color: #F3FAF4;
+            .c-simple-accordian__accoridian-body__heading__icon--vertical{
+                height: 0;
+            }
+        }
+        // TODO: Chnage font family
+        font-family: Barlow,Verdana,sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;        
+        color: #3B3B3D;
+        p{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        summary{
+            // TODO: Chnage font family
+            font-family: Barlow,Verdana,sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #3B3B3D;
+            list-style: none;
+            display: flex;
+            height: 60px;
+            align-items: center;
+            position: relative;
+            padding-left: 15px;
+            &:hover{
+                cursor: pointer;
+            }
+            .c-simple-accordian__accoridian-body__heading__icon--horizontal{
+                transform: rotate(90deg);
+            }
+            span{
+                position: absolute;
+                display: block;
+                height: 16px;
+                width: 5px;
+                right: 32px;
+                background-color: #3B3B3D;
+                border-radius: 2px;
+            }
+        }
+    }
+
+
+
+}

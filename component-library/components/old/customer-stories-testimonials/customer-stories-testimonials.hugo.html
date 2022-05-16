@@ -1,0 +1,34 @@
+<div class="papercut">
+<section class="c-sections-customer-stories-testimonials">
+    <div class="container position--relative">
+      <div class="grid">
+        <div class="type--align-center col--8--laptop margin--bottom--xxxl">
+          <h2>{{ .heading }}</h2>
+        </div>
+      </div>
+      <div class="grid position--relative" >
+        <div class="display--flex position--center-top--tablet margin--left--50--tablet margin--top--none--tablet layout--width--100">
+          <a href="{{ .image_1_link }}" class="display--inline-block margin--right--m">
+            <img src="{{ .image_1 }}" alt="{{ .image_1_alt_tag }}" />
+          </a>
+          <a href="{{ .image_2_link }}" class="display--inline-block margin--right--m margin--top--none">
+            <img src="{{ .image_2 }}" alt="{{ .image_2_alt_tag }}" />
+          </a>
+          <a href="{{ .image_3_link }}" class="display--inline-block margin--top--none">
+            <img src="{{ .image_3 }}" alt="{{ .image_3_alt_tag }}" />
+          </a>
+        </div>
+        <div class="grid grid--left">
+          <div class="col--12 col--6--tablet col--5--desktop position--relative padding--top--xl margin--top--none--tablet margin--bottom--xl--tablet margin--bottom--xxxxxl--laptop padding--right--xxl padding--right--none--desktop margin--top--xxl margin--top--none--tablet">
+            <svg class="position--top-left" width="32" height="32">
+              <path class="fill--brand" d="M10.8832612 15.9703211h5.2484886v16.9708554H.68293835c-.018909-.105847-.08121572-.2898475-.08059576-.4735081.02123389-5.520523-.04773748-11.0442741.1024496-16.5607196.1463123-5.3730508 2.10106936-9.80859982 6.30925274-12.83211959C9.5097235 1.28171685 12.3420443.56219526 15.2462814.10652657 15.4747394.07067792 15.7038173.04094562 15.9897772 0c.0286735.18383055.0796658.36392332.0813708.54452578.0203039 2.23671824.0201489 4.47360637.0592068 6.70981491.0082146.47843513-.1250784.69811433-.5364267.86325601-.6506557.26147431-1.3065812.55149163-1.8950852.94616664-2.3259625 1.55933156-2.9031521 4.00349626-2.8155817 6.90655776M32.602338 32.9411765H17.0762483c0-1.6038477-.0085045-3.1746386.0017009-4.7450904.0261323-4.0359798.0153083-8.0731463.1014363-12.10777.1725654-8.07585865 4.7738447-13.86350934 12.2532236-15.49058152C30.4131082.38464542 31.4011841.21444533 32.5121896 0c0 .60129454-.0034018 1.09951971.0006185 1.59774487.0132981 1.63758255.0290702 3.27482605.0443784 4.91223907.0129888 1.39584417-.0406673 1.28480725-1.1334267 1.92204046-1.0227126.59654793-2.0440337 1.32803537-2.8344944 2.2410809-1.2461508 1.4397503-1.2515628 3.3648422-1.2769219 5.3133281h5.2899945v16.9547431z" />
+            </svg>
+            <p class="type--feature margin--top--xl margin--bottom--m">{{ .quote }}</p>
+            <p class="type--subhead2">&ndash; {{ .quote_author }}</p>
+            <a href="{{ .button_link_url }}" class="button" title="Read our customer stories">{{ .button_link_text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

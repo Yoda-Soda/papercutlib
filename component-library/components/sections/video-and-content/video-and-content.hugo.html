@@ -1,0 +1,8 @@
+{{ $c := "c-sections-video-and-content" }}
+<div class="{{$c}}">
+    <div class="{{$c}}__content">
+        <p class="{{$c}}__content__heading">{{ .heading }}</p>
+        <p class="{{$c}}__content__content">{{ .content }}</p>
+    </div>
+    {{ partial "bookshop" (slice "simple/video-with-background-image" .video )}}
+</div>

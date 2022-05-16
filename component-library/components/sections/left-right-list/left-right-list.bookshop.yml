@@ -1,0 +1,48 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Left-right-list"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: 
+  body_text:
+  image_path: 
+  background_color: 
+  list_alignment:
+  links:
+    - content_html:  
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: "Find out more about what’s driving the Forest Positive movement"
+  body_text: "Some copy here about trees, climate change, deforestation, benefits of planting and/or similar. It shouldn’t be too long, as we expect this section to not be more than this amount of lines. But there’s room for a bit more. Maybe another line."
+  image_path: /image/forest_bike.svg
+  background_color: "#F1F3F5"
+  list_alignment: "right"
+  links:
+    - content_html: "First link here. A title with a hyperlink behind"
+    - content_html: "Link here. A title with a hyperlink behind."
+    - content_html: "Link here. A title with a hyperlink behind."
+    - content_html: "Link here. A title with a hyperlink behind."
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  background_color:
+    type: select
+    options:
+      values:
+        - "#F1F3F5"
+        - "#F8F9FA"
+  list_alignment:
+    type: select
+    options:
+      values:
+        - "left"
+        - "right"
+  body_text:
+    type: markdown

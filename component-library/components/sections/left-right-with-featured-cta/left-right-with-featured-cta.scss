@@ -1,0 +1,75 @@
+.c-sections-left-right-with-featured-cta {
+    grid-template-columns: 1fr repeat(12, calc(min(100px, 7.3%))) 1fr;
+    display: grid;
+    min-height: 600px;
+    height: 600px;
+    position: relative;
+    margin-bottom: 100px;
+    //TODO: Remove this when bg img or video is in
+    background-color: #F1F3F5;
+    @media only screen and (max-width: 1160px){
+        height: 663px;
+    }
+    @media only screen and (max-width: 766px){
+        height: 705px;
+    }    
+    &__left, &__right{
+        z-index: 1;
+    }
+
+    &__left--heading{
+        grid-column: 2 / 7;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 1160px){
+            
+        }
+
+    }
+
+    &__left--heading, &__right--heading{
+        h1{
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            line-height: 125%;
+            color: #fff;
+            @media only screen and (max-width: 1160px){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__left--cta{
+        grid-column: 2 / 9;
+
+    }
+
+    &__right--cta{
+        grid-column: 7 / 14;
+        @media only screen and (max-width: 1160px){
+            grid-row: 2/2;
+        }
+    }
+
+    &__right--heading{
+        grid-column: 9 / 14;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__right--cta,  &__left--cta{
+        position: relative;
+        top: 100px;
+        @media only screen and (max-width: 1160px){
+            top: 0;
+        }
+        @media only screen and (max-width: 766px){
+            grid-column: 2 / 14;
+
+        }   
+    }
+    
+}
+

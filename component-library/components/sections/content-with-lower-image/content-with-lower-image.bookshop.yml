@@ -1,0 +1,34 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Content with lower image
+  description: Content with lower image
+  icon: wysiwyg
+  tags:
+    - Content
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  content: ""
+  image: ""
+  svg_code: ""
+  background_variant: grey
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: What is Forest Positive
+  content: Forest Positive is an evolution of the sustainability movement. It offers more than reducing waste or carbon emissions to achieve a neutral environmental impact. Forest Positive practises tip the scales into an environmental surplus.
+  image: http://placekitten.com/571/138
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: 
+  content:
+    type: html
+  background_variant:
+    type: select
+    options:
+      values:
+        - grey
+        - light-grey

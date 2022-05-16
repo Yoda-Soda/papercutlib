@@ -1,0 +1,10 @@
+{{ $c := "c-generic-link" }}
+
+<a class="{{ $c }} " href="{{ .url }}"
+    {{ if .open_in_new_tab }}
+        target="_blank"
+        rel="noopener"
+    {{ end }}
+>
+    {{ .content }}
+</a>

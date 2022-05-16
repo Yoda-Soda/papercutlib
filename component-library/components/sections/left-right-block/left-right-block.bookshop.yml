@@ -1,0 +1,36 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Sections Left-right-block"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: 
+  subheading:
+  body_text: 
+  image_path: 
+  image_alignment: "left"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: "What is PaperCut Grows?"
+  subheading: "forest positive printing"
+  body_text: >- 
+    PaperCut Grows is our sustainability program that transforms your essential documents into Forest Positive printing.   Available with our flagship solutions PaperCut MF and PaperCut Hive, this easy-to-use in-product tool converts your documents printed into trees planted via a small up-front investment per printer.   We’re the experts on the print side of things, we leave the actual tree planting to our non-profit reforestation partners around the globe.
+  image_path: "https://placedog.net/500"
+  image_alignment: "left"
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  image_alignment:
+    type: select
+    options:
+      values:
+        - "left"
+        - "right"
+  body_text:
+    type: markdown

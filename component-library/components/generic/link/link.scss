@@ -1,0 +1,24 @@
+.c-generic-link {
+    background-color: #19892B;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    line-height: 21px;
+    //TODO: Change font family
+    font-family: Barlow,Verdana,sans-serif;
+
+    display: flex;
+    width: max-content;
+    align-items: center;
+    max-width: 100%;
+    font-weight: 800;
+    padding: 12px 24px;
+    transition: background-color .25s;
+    &:hover{
+        background-color: #006316;
+    }
+
+}

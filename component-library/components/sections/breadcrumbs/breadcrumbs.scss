@@ -1,0 +1,25 @@
+.c-breadcrumbs {
+  background-color: #f2f2f4;
+  font-size: 14px;
+  color: black;
+  font-weight: var(--font-semibold);
+  a:link { text-decoration: none; }
+
+  a:visited { text-decoration: none; }
+  
+  a:hover { text-decoration: solid; }
+  
+  a:active { text-decoration: none; }
+
+
+  &__list {
+    padding: 23px 68px;
+    display: flex;
+    gap: 0 14px;
+    &__item {
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{{ $c := "c-content-with-lower-image" }}
+
+<div class="{{$c}}">
+	<div class="{{$c}}__text">
+		{{ if .heading }}
+			<h2 class="{{$c}}__heading">{{ .heading }}</h2>
+		{{ end }}
+
+		<p>{{ .content | safeHTML }}</p>
+	</div>
+
+	<div class="{{$c}}__image">
+		{{ if .svg_code }}
+			{{ .svg_code | safeHTML }}
+		{{ else }}
+			<img src="{{ .image }}" 
+					alt="{{ .label }}" />
+		{{ end }}
+	</div>
+</div>

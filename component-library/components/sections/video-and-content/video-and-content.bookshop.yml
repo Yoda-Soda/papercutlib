@@ -1,0 +1,22 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Video-and-content"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  content: ""
+  video: bookshop:simple/video-with-background-image
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: Forest Positive Printing with PaperCut Grows
+  content: Just reducing waste isn’t enough anymore. Turn your printing’s impact around by becoming Forest Positive.
+  
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

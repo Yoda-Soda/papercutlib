@@ -1,0 +1,30 @@
+{{ $c := "c-sections-banner-with-video-background" }}
+<div class="{{ $c }}">
+    {{ partial "bookshop" (slice "simple/background-wistia-video" .background_video) }}
+    {{ with .background_video }}
+        {{ partial "bookshop" (slice "simple/background-wistia-video" .background_video) }}
+    {{ end }}
+    <div class='{{ $c }}__body 
+    {{ if eq .content_alignment "left" }}
+        {{ $c }}__body--left
+    {{ else }}
+        {{ $c }}__body--right
+    {{ end }}
+    '>
+        <div class="{{ $c }}__body__wrapper">
+            <div class="{{ $c }}__body__wrapper__heading">
+                {{ if .logo_image_path }}
+                    <img src="{{ .logo_image_path }}" alt="{{ .logo_image_alt_tag }}">
+                    <h1 style="position: absolute; opacity: 0">{{ .heading }}</h1>
+                    <h2>{{ .subheading }}</h2>
+                {{ else }}
+                    <h1>{{ .heading }}</h1>
+                    <h2>{{ .subheading }}</h2>
+                {{ end }}
+            </div>
+            <div class="{{ $c }}__body__wrapper__link">
+                {{ partial "bookshop" (slice "generic/link" .link) }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{{ $c := "c-sections-left-right-block"}}
+<div class="{{ $c }}">
+    {{ if eq .image_alignment "left"}}
+    <div class="{{ $c }}__left">
+        <img src="{{ .image_path }}" alt="">
+    </div>
+
+    <div class="{{ $c }}__right">
+        {{ if .subheading }}
+            <p class="{{ $c }}__right__subheading">{{ .subheading }}</p>
+        {{ end }}
+        {{ if .heading }}
+            <h4 class="{{ $c }}__right__heading">{{ .heading }}</h4>
+        {{ end }}
+        <p class="{{ $c }}__right__body-text">{{- .body_text | markdownify -}}
+    </div>
+
+    {{ else }}
+
+    <div class="{{ $c }}__left">
+        {{ if .subheading }}
+            <p class="{{ $c }}__left__subheading">{{ .subheading }}</p>
+        {{ end }}
+        {{ if .heading }}
+            <h4 class="{{ $c }}__left__heading">{{ .heading }}</h4>
+        {{ end }}
+        <p class="{{ $c }}__right__body-text">{{- .body_text | markdownify -}}
+
+    </div>
+
+    <div class="{{ $c }}__right">
+        <img src="{{ .image_path }}" alt="">
+
+    </div>
+
+    {{ end }}
+
+</div>

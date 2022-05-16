@@ -1,0 +1,10 @@
+.c-simple-background-wistia-video {
+    z-index: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.w-bottom-bar-left, .w-bottom-bar, .w-bottom-bar-middle, .w-bottom-bar-right, .w-captions{
+    display: none;
+    opacity: 0;
+}

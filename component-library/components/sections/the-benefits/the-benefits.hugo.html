@@ -1,0 +1,19 @@
+{{ $c := "c-sections-the-benefits"}}
+
+<div class="{{ $c }}">
+    <div class="{{ $c }}__heading">
+        <h4>{{ .subheading }}</h4>
+        <h2>{{ .heading }}</h2>
+        <p>{{ .body_text }}</p>
+    </div>
+    <div class="{{ $c }}__left-right">
+        <div class="{{ $c }}__left-right__image">
+            <img src="{{ .image_path }}" alt="">
+        </div>
+        <div class="{{ $c }}__left-right__accordians">
+            {{ range .accordians }}
+                {{ partial "bookshop" (slice "simple/accordian" .) }}
+            {{ end }}
+        </div>
+    </div>
+</div>

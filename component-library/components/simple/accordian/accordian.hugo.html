@@ -1,0 +1,12 @@
+{{ $c := "c-simple-accordian"}}
+<div class="{{ $c }}">
+    <details class="{{ $c }}__accoridian-body">
+        <summary class="{{ $c }}__accoridian-body__heading">
+            {{ .title }}
+            <span class="{{ $c }}__accoridian-body__heading__icon--vertical"></span>
+            <span class="{{ $c }}__accoridian-body__heading__icon--horizontal"></span>
+
+        </summary>
+        <p>{{ .body_content }}</p>
+    </details>
+</div>

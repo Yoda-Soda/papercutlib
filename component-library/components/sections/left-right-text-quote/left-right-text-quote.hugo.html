@@ -1,0 +1,30 @@
+{{ $c := "c-sections-left-right-text-quote" }}
+
+<div class="c-sections-left-right-text-quote" style = "background-color: {{ .background_color }};">
+    {{ if eq .quote_alignment "right"}}
+        <div class="{{ $c }}__body--right {{ $c }}__body">
+            <h4>{{ .heading }}</h4>
+            <h2>{{ .subheading }}</h2>
+            <p>{{- .body_text | markdownify -}}
+        </div>
+        <div class="{{ $c }}__quote--right {{ $c }}__quote">
+            <div class="{{ $c }}__quote__quoteBody">
+                <h3>{{ .quote }}</h3>
+                <p>- {{ .author }}</p>
+            </div>
+        </div>
+    {{ else }}
+    <div class="{{ $c }}__quote--left {{ $c }}__quote">
+        <div class="{{ $c }}__quote__quoteBody">
+            <h3>{{ .quote }}</h3>
+            <p>- {{ .author }}</p>
+        </div>
+    </div>
+    <div class="{{ $c }}__body--left {{ $c }}__body">
+        <h4>{{ .heading }}</h4>
+        <h2>{{ .subheading }}</h2>
+        <p>{{ .body_text }}</p>
+    </div>
+    {{ end }}
+
+</div>

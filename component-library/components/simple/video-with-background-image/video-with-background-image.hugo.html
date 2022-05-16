@@ -1,0 +1,7 @@
+{{ $c := "c-simple-video-with-background-image" }}
+<div class="{{$c}}">
+    <div class="{{$c}}__video">
+        {{ partial "bookshop" (slice "simple/wistia-video" .video )}}
+    </div>
+    <img class="{{$c}}__image" src="{{ .image }}">
+</div>

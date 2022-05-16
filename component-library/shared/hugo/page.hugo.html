@@ -1,0 +1,12 @@
+<div class="components">
+	{{ range . }}
+  		<div class="component
+  					{{ if .component_options.background_variant }}
+  						component--{{ .component_options.background_variant | urlize }}
+  					{{ else }}
+  						component--white
+  					{{ end }}">
+			{{ partial "bookshop" . }}
+		</div>
+	{{ end }}
+</div>

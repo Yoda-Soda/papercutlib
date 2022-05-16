@@ -1,0 +1,143 @@
+@function strip-unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@mixin scale-custom($properties, $min-value, $max-value, $min-vw, $max-vw) {
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
+
+	@media (min-width: $min-vw) {
+		@each $property in $properties {
+			#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+		}
+	}
+
+	@media (min-width: $max-vw) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}
+
+@function strip-unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+.c-carousel {
+	margin: 9.6em 0 8.5em 0;
+	overflow: hidden;
+
+	@media (max-width: 478px) {
+		height: 100%;
+	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+		
+	&__content {
+		margin: 0 auto;
+		max-width: 714px;
+		text-align: center;
+
+		h2 {
+			line-height: 120%;
+			font-size: var(--h2-size);
+		}
+
+		p {
+			margin: 3.2em 0 6.4em 0;
+			color: var(--text-colour-var-3);
+		}
+	}
+		
+		
+	&__wrapper {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1280px;
+		overflow: visible;
+
+		@media (max-width: 478px) {
+			height: 100%;
+		}
+	}
+		
+	&__slides {
+		position: relative;
+		height: 500px;
+		transition: width .4s;
+		overflow: visible;
+
+		@media (max-width: 2560px) {
+			@include scale-custom(margin-left, 126px, 125px, 1600px, 2560px);
+		}
+
+		@media (max-width: 1600px) {
+			@include scale-custom(margin-left, 125px, 126px, 1280px, 1600px);
+		}
+	
+		@media (max-width: 1280px) {
+			@include scale-custom(margin-left, -475px, -215px, 750px, 1280px);
+		}
+		
+		@media (max-width: 750px) {
+			@include scale-custom(margin-left, -615px, -475px, 478px, 750px);
+		}
+
+		@media (max-width: 478px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 240px;
+		left: 60px;
+		margin-top: -10px;
+		width: 56px;
+		height: 56px;
+		z-index: 2;
+		border: 2px solid #D9D9DC;
+		border-radius: 50%;
+		outline: none;
+		color: white;
+		cursor: pointer;
+		-webkit-user-select: none;
+		background: #F2F2F4;
+
+		@media (max-width: 478px) {
+			display: none;
+		}
+
+		&--right {
+			left: unset;
+			right: 60px;
+			top:240px;
+
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

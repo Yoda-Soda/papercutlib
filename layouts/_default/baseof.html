@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- partial "head/head.html" . -}}
+    <body>
+        <div class="papercut">
+            <header>
+                {{ partial "bookshop" (slice "structures/navigation" .) }}
+            </header>
+        </div>
+        <main >
+            <!-- Render any additional page content below the page's content blocks -->
+            {{ block "main" . }}{{ end }}
+        </main>
+        <div class="papercut">
+            {{ partial "bookshop" (slice "structures/footer" . ) }}
+        </div>
+    </body>
+</html>

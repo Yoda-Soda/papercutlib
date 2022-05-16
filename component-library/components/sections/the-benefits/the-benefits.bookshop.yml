@@ -1,0 +1,33 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Sections The-benefits"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  subheading: 
+  heading:
+  body_text: 
+  image_path: 
+  accordians: [bookshop:simple/accordian]
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  subheading: "THE BENEFITS"
+  heading: "Why PaperCut Grows is good for your bottom line, and the planet"
+  body_text: "Grows is an easy and affordable way to make business printing Forest Positive. Plant more trees than your printing uses, maximize your climate action, and directly invest in reforestation."
+  image_path: "https://placedog.net/500"
+  accordians: 
+    - bookshop:simple/accordian
+    - bookshop:simple/accordian
+    - bookshop:simple/accordian
+    - bookshop:simple/accordian
+    - bookshop:simple/accordian
+
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
